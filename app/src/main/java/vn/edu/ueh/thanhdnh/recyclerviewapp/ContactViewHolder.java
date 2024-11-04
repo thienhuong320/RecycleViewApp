@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class WordViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class ContactViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
   public TextView getWordItemView() {
     return wordItemView;
   }
@@ -30,10 +30,9 @@ public class WordViewHolder extends RecyclerView.ViewHolder implements View.OnCl
   private TextView wordItemView;
   private ImageView imageViewItem;
   private Button buttonItem;
+  private ContactListAdapter mAdapter;
 
-  private WordListAdapter mAdapter;
-
-  public WordViewHolder(View itemView, WordListAdapter adapter) {
+  public ContactViewHolder(View itemView, ContactListAdapter adapter) {
     super(itemView);
     wordItemView = itemView.findViewById(R.id.textView);
     this.mAdapter = adapter;

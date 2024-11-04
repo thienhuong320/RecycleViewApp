@@ -14,7 +14,7 @@ import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
   RecyclerView mRecyclerView;
-  WordListAdapter mAdapter;
+  ContactListAdapter mAdapter;
   LinkedList<String> mWordList = new LinkedList<String>(){{
     add("Anna");
     add("John");
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     });
 
     mRecyclerView = findViewById(R.id.myrecyclerview);
-    mAdapter = new WordListAdapter(this, mWordList);
+    mAdapter = new ContactListAdapter(this, mWordList);
     mRecyclerView.setAdapter(mAdapter);
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
   }
